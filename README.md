@@ -1,94 +1,196 @@
-<header>
-
-<!--
-  <<< Author notes: Course header >>>
-  Read <https://skills.github.com/quickstart> for more information about how to build courses using this template.
-  Include a 1280×640 image, course name in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Next to "About", add description & tags; disable releases, packages, & environments.
-  Add your open source license, GitHub uses the MIT license.
--->
-
-# Code with GitHub Copilot
-
-_GitHub Copilot can help you code by offering autocomplete-style suggestions right in VS Code and Codespaces._
-
-</header>
-
-<!--
-  <<< Author notes: Step 1 >>>
-  Choose 3-5 steps for your course.
-  The first step is always the hardest, so pick something easy!
-  Link to docs.github.com for further explanations.
-  Encourage users to open new tabs for steps!
--->
-
-## Step 1: Leverage Codespaces with VS Code for Copilot
-
-_Welcome to "Develop With AI Powered Code Suggestions Using GitHub Copilot and VS Code"! :wave:_
-
-GitHub Copilot is an AI pair programmer that helps you write code faster and with less work. It draws context from comments and code to suggest individual lines and whole functions instantly. GitHub Copilot is powered by OpenAI Codex, a generative pretrained language model created by OpenAI.
-
-**Copilot works with many code editors including VS Code, Visual Studio, JetBrains IDE, and Neovim.**
-
-Additionally, GitHub Copilot is trained on all languages that appear in public repositories. For each language, the quality of suggestions you receive may depend on the volume and diversity of training data for that language.
-
-Using Copilot inside a Codespace shows just how easy it is to get up and running with GitHub's suite of [Collaborative Coding](https://github.com/features#features-collaboration) tools.
-
-> **Note**
-> This skills exercise will focus on leveraging GitHub Codespace. It is recommended that you complete the GitHub skill, [Codespaces](https://github.com/skills/code-with-codespaces), before moving forward with this exercise.
-
-### :keyboard: Activity: Enable Copilot inside a Codespace
-
-**We recommend opening another browser tab to work through the following activities so you can keep these instructions open for reference.**
-
-Before you open up a codespace on a repository, you can create a development container and define specific extensions or configurations that will be used or installed in your codespace. Let's create this development container and add copilot to the list of extensions.
-
-1. Navigating back to your **Code** tab of your repository, click the **Add file** drop-down button, and then click `Create new file`.
-1. Type or paste the following in the empty text field prompt to name your file.
-   ```
-   .devcontainer/devcontainer.json
-   ```
-1. In the body of the new **.devcontainer/devcontainer.json** file, add the following content:
-   ```
-   {
-       // Name this configuration
-       "name": "Codespace for Skills!",
-       "customizations": {
-           "vscode": {
-               "extensions": [
-                   "GitHub.copilot"
-               ]
-           }
-       }
-   }
-   ```
-1. Select the option to **Commit directly to the `main` branch**, and then click the **Commit new file** button.
-1. Navigate back to the home page of your repository by clicking the **Code** tab located at the top left of the screen.
-1. Click the **Code** button located in the middle of the page.
-1. Click the **Codespaces** tab on the box that pops up.
-1. Click the **Create codespace on main** button.
-
-   **Wait about 2 minutes for the codespace to spin itself up.**
-
-1. Verify your codespace is running. The browser should contain a VS Code web-based editor and a terminal should be present such as the below:
-   ![Screen Shot 2023-03-09 at 9 09 07 AM](https://user-images.githubusercontent.com/26442605/224102962-d0222578-3f10-4566-856d-8d59f28fcf2e.png)
-1. The `copilot` extension should show up in the VS Code extension list. Click the extensions sidebar tab. You should see the following:
-   ![Screen Shot 2023-03-09 at 9 04 13 AM](https://user-images.githubusercontent.com/26442605/224102514-7d6d2f51-f435-401d-a529-7bae3ae3e511.png)
-
-**Wait about 60 seconds then refresh your repository landing page for the next step.**
-
-<footer>
-
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
-
----
-
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/code-with-copilot) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
-
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
-
-</footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopMate | Your Shopping Partner</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+        header a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
+            color: #fff;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .hero button {
+            background: #ff5722;
+            color: #fff;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .hero button:hover {
+            background: #e64a19;
+        }
+        .offers {
+            background: #f4f4f4;
+            padding: 2rem;
+            text-align: center;
+        }
+        .offers h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .offers p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .offers span {
+            background: #ff5722;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            font-size: 1.2rem;
+            border-radius: 5px;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            padding: 2rem;
+            background: #fff;
+        }
+        .product {
+            background: #f9f9f9;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+        .product h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .product p {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+        .product .offer {
+            color: #ff5722;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .product button {
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .product button:hover {
+            background: #45a049;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 1.5rem 2rem;
+            text-align: center;
+        }
+        footer a {
+            color: #ff5722;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">ShopMate</div>
+        <nav>
+            <a href="#offers">Offers</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Welcome to ShopMate</h1>
+        <p>Discover amazing deals and shop your favorite products now!</p>
+        <button>Start Shopping</button>
+    </section>
+    <section id="offers" class="offers">
+        <h2>Exclusive Offers & Coupons</h2>
+        <p>Don't miss out on our latest deals:</p>
+        <span>20% OFF on your first purchase! Use code: FIRST20</span>
+    </section>
+    <section id="products" class="products">
+        <div class="product">
+            <img src="https://via.placeholder.com/250" alt="Product 1">
+            <h3>Product 1</h3>
+            <p class="offer">50% OFF</p>
+            <p>Stylish and affordable. Perfect for everyone!</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/250" alt="Product 2">
+            <h3>Product 2</h3>
+            <p class="offer">Buy 1 Get 1 Free</p>
+            <p>Grab this deal before it's gone!</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/250" alt="Product 3">
+            <h3>Product 3</h3>
+            <p class="offer">Save $10</p>
+            <p>The best quality at unbeatable prices.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/250" alt="Product 4">
+            <h3>Product 4</h3>
+            <p class="offer">Limited Time Offer</p>
+            <p>Experience luxury at an affordable price.</p>
+            <button>Add to Cart</button>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 ShopMate | <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+        <p>Follow us on 
+            <a href="#facebook">Facebook</a>, 
+            <a href="#twitter">Twitter</a>, 
+            <a href="#instagram">Instagram</a>
+        </p>
+    </footer>
+</body>
+</html>
